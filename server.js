@@ -14,7 +14,7 @@ admin.initializeApp({
         "type": "service_account",
         "project_id": "gwrc-database",
         "pivate_key_id": PRIVATE_KEY_ID,
-        "private_key": PRIVATE_KEY.replace('/n', ''),
+        "private_key": PRIVATE_KEY.replace(/\\n/g, '\n'),
         "client_email": "firebase-adminsdk-8fd35@gwrc-database.iam.gserviceaccount.com",
         "client_id": "104366579085758409343",
         "auth_uri": "https://accounts.google.com/o/oauth2/auth",
