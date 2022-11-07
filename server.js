@@ -34,7 +34,7 @@ mongoose.connection
 
 const peopleSchema = new mongoose.Schema({
     name: { required: true, type: String },
-    title: { required: true, type: String },
+    title: String,
     image: {type: String,
         default: 'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png'
     },
@@ -49,9 +49,9 @@ const peopleSchema = new mongoose.Schema({
 
 const grantsSchema = new mongoose.Schema({
     name: { required: true, type: String },
-    organization: {required: true, type: String },
-    description: {required: true, type: String },
-    dateDue: {required: true, type: Date},
+    organization: String,
+    description: String,
+    dateDue: Date,
     dateOpen: Date,
     applied: Boolean,
     succeeded: Boolean,
