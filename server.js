@@ -54,13 +54,15 @@ const grantsSchema = new mongoose.Schema({
     dateDue: {required: true, type: Date},
     dateOpen: Date,
     applied: Boolean,
+    succeeded: Boolean,
     url: String,
+    notes: String,
     createdByUserId: String,
 }, {timestamps: true});
 
 const resourceSchema = new mongoose.Schema({
     name: {required: true, type: String },
-    description: {required: true, type: String },
+    description: String,
     url: String,
     createdByUserId: String,
 }, {timestamps: true});
