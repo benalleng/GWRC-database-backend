@@ -53,7 +53,7 @@ const grantsSchema = new mongoose.Schema({
     description: String,
     dateDue: String,
     dateOpen: String,
-    applied: Boolean,
+    applied: String,
     succeeded: Boolean,
     url: String,
     notes: String,
