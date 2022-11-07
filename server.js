@@ -145,7 +145,6 @@ app.put('/api/people/:id', isAuthenticated, async (req, res) => {
 
 app.put('/api/grants/:id', isAuthenticated, async (req, res) => {
     try {
-        req.body.applied = !!req.body.applied
         req.body.succeeded = !!req.body.succeeded
         res.status(200).json(await Grants.findByIdAndUpdate(
             req.params.id,
@@ -186,7 +185,6 @@ app.post('/api/people', isAuthenticated, async (req, res) => {
 app.post('/api/grants', isAuthenticated, async (req, res) => {
     try {
         req.body.createdByUserId = req.user.uid
-        req.body.applied = !! req.body.applied;
         req.body.succeeded = !! req.body.succeeded;
         // console.log(req.user)
         res.status(201).json(await Grants.create(req.body));
